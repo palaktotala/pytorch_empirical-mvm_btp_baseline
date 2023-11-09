@@ -135,7 +135,7 @@ if __name__=='__main__':
     print(len(dl_tr), len(dl_vl), len(dl_ts))
     
     if args.size_epoch==0: args.max_iter = 1
-    else: args.max_iter = len(dl_tr)*args.size_epoch
+    else: args.max_iter = len(dl_tr)*args.size_epoch #2
     args.actual_size_test = len(dl_ts.dataset)
 
     model = VIOLET_QAOE_MLM_Head(args, tokzr=tokzr)
